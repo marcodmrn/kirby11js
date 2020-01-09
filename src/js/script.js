@@ -92,7 +92,7 @@ function game() {
             // picBoss.remove();
             // bossRandom();
 
-            if (counterLifeBoss === 3) {
+            if (counterLifeBoss === 1) {
               oxo.screens.loadScreen("endWin", function() {
                 appearHTP();
                 sound();
@@ -105,7 +105,7 @@ function game() {
           } else {
             divHeartYou.removeChild(heartYou);
             counterLifeYou++;
-            if (counterLifeYou === 3) {
+            if (counterLifeYou === 2) {
               oxo.screens.loadScreen("endLoose", function() {
                 appearHTP();
                 sound();
