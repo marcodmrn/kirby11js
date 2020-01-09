@@ -176,16 +176,16 @@ function appearHTP() {
 
 function sound() {
   let sound = document.querySelector(".header__icon--sound");
+  let mute = document.querySelector(".header__icon--mute");
   let audio = document.querySelector("audio");
-  let isPlaying;
   sound.addEventListener("click", function() {
-    if (isPlaying === true || isPlaying === undefined) {
-      audio.pause();
-      isPlaying = false;
-    }
-    if (isPlaying === false) {
-      audio.play();
-      isPlaying = true;
-    }
+    audio.pause();
+    sound.style.display = "none";
+    mute.style.display = "block";
+  });
+  mute.addEventListener("click", function() {
+    audio.play();
+    mute.style.display = "none";
+    sound.style.display = "block";
   });
 }
